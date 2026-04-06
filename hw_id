@@ -2,3 +2,13 @@ Audio DSP -- ACPI ID is QCOM0C1B (for qcom-adsp-pil)
 Smart Amps -- ACPI ID is 0217:0204 (for snd-soc-wsa884x)
 Power Controller -- ACPI ID is QCOM0CA4 (for qcom-ucs)
 ADC / Mic -- ACPI ID is QCOM0C11 (for qcom-spmi-adc)
+
+Device Instance Path:
+  * SDW\02170204\1&0000&00&00
+
+  * SDW\02170204\1&0001&00&00
+
+  * SDW\02170204\1&0002&00&00
+
+  * SDW\02170204\1&0003&00&00
+
