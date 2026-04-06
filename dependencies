@@ -1,0 +1,6 @@
+# Audio DSP
+
+  "_SB.PEP0" (Power Engine Plugin); expected value -- D0 (Full Power state)
+  "_SB.GIO0" / "_SB.PM01" (GPIO Controllers) -- Initialization required
+  "_SB.GLNK" (G-Link) route
+  "_SB.I2C2" / "I2C4" / "I2C8" -- Calibration data Control Buses
