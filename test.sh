@@ -4,6 +4,19 @@ systemctl --user stop wireplumber pipewire pipewire-pulse
 
 amixer -c 0 cset name='WSA_CODEC_DMA_RX_0 Audio Mixer MultiMedia1' 1
 
+amixer -c 0 cset numid=103 255
+
+amixer -c 0 cset numid=73 2
+amixer -c 0 cset numid=74 2
+amixer -c 0 cset numid=90 2
+amixer -c 0 cset numid=91 2
+
+
+amixer -c 0 cset numid=78 3
+amixer -c 0 cset numid=82 4
+amixer -c 0 cset numid=95 3
+amixer -c 0 cset numid=99 4
+
 amixer -c 0 cset name='TweeterLeft COMP Switch' 1
 amixer -c 0 cset name='TweeterRight COMP Switch' 1
 amixer -c 0 cset name='TweeterLeft DAC Switch' on
