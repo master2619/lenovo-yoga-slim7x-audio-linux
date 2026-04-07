@@ -2,6 +2,18 @@
 
 echo "Do not run this script. It will permanently damage the hardware!!"
 
+trap "echo -e '\nInterrupted. Exiting...'; exit 1" SIGINT
+
+read -n 1 -s -p "Press 'C' to continue or any other key to exit: " key
+echo
+
+if [[ ! "$key" =~ [cC] ]]; then
+    echo "Exitting..."
+    exit 1
+fi
+
+echo "Continuing..."
+
 systemctl --user stop wireplumber pipewire pipewire-pulse
 
 amixer -c 0 cset name='WSA_CODEC_DMA_RX_0 Audio Mixer MultiMedia1' 1
