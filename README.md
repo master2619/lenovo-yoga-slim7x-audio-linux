@@ -24,3 +24,4 @@ Findings (06/04/2026):
 1) UCM profile (HiFI.conf) and DSP pseudo-logic (10-crossover.conf) created
 2) Future roadmap set to reverse engineering proprietary DSP logic over from Windows
 3) VISENSE / SoftClip logic to be implemented in future
+4) Static binary analysis of Windows blobs (.dll/.sys) and ETW required
