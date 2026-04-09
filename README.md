@@ -27,3 +27,8 @@ Findings (06/04/2026):
 2) Future roadmap set to reverse engineering proprietary DSP logic over from Windows
 3) VISENSE / SoftClip logic to be implemented in future
 4) Static binary analysis of Windows blobs (.dll/.sys) and ETW required
+
+
+# UCM profiles carried over from the main alsa-ucm-conf project
+1) UCM profiles merged from main also-ucm-conf upstream project
+2) DSP framework is still incomplete
