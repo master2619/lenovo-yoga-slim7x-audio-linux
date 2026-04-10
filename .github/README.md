@@ -3,6 +3,8 @@ Audio DSP port efforts for the Lenovo Yoga Slim 7X (14Q8X9) on Linux
 
 Warning: Do not run any code on your hardware. This project is extremely experimental and may damage your hardware. This porject provides absolutely no warranty.
 
+`Start of devlog`
+
 # Audio hardware path scan referencing Windows (6th April 2026)
 
 1) ACPI (DSDT) dump extracted in "firmware"
