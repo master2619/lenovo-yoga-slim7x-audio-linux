@@ -35,3 +35,7 @@ Findings (06/04/2026):
 1) UCM profiles merged from main also-ucm-conf upstream project
 2) DSP framework is still incomplete (VISENSE / SoftClip not integrated fully) [speakersafetyd to be ported over]
 
+# .sys core Windows driver files' analysis (11th April 2026)
+1) Ghidra and pseudo-C code obtained
+2) Project structure improved
+
