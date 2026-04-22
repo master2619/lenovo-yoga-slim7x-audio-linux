@@ -8,7 +8,6 @@ This is an experimental, low-level project involving DSP, Pipewire/Wireplumber D
 
 We're currently focusing on a few major bottlenecks:
 
-* **Kernel Driver Patching (`wsa884x.c` or `x1e80100.c`):** We need help with proper speaker amp initialization, safe sequencing to prevent hardware damage, and matching Windows' behavior.
 * **Logic port-over from speakersafetyd:** speakersafetyd framework from AsahiLinux (originally meant for Apple Silicon Macs) can be useful in logic review.
 * **DSP Reverse Engineering:** We are trying to understand the proprietary DSP logic from Windows, specifically regarding VISENSE (speaker protection) and SoftClip (dynamic limiting).
 * **DSP Framework Integration:** Porting that logic into the Linux audio pipeline using ALSA, UCM profiles, and topology files.
