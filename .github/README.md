@@ -11,20 +11,19 @@ Currently, upstream Linux distributions default to a "crippled but safe" woofer-
 ## Architecture
 This project uses a strict separation of concerns, splitting physical hardware protection from acoustic user-space tuning:
 
-* **Level 0:** Kernel driver patches (`wsa884x.c` / `x1e80100.c`) implementing Q16.16 fixed-point VISENSE telemetry interception and SoftClip limiting. This prevents the voice coils from melting.
-* **Level 1:** User-space PipeWire/WirePlumber profiles (`DSP/10-crossover.conf`) and ALSA UCM configurations (`alsa-ucm2-conf/`) replicating the proprietary Dolby Atmos biquad EQ and crossover frequencies.
+* **Level 0:** Kernel driver: Already exposes VISENSE and SoftClip via ALSA
+* **Level 1:** User-space PipeWire/WirePlumber profiles (`DSP/10-crossover.conf`) and ALSA UCM configurations (`alsa-ucm2-conf/`) replicating the proprietary Dolby Atmos biquad EQ and crossover frequencies. We are thinking of porting over speakersafetyd daemon to this laptop, but it is highly optimistic to be sure about it.
 
 ## Current Status
 * **ALSA UCM Routing:** Implemented (from Upstream alsa-ucm-conf project)
 * **PipeWire DSP Crossover:** Implemented but untested
-* **Kernel VISENSE/SoftClip Math:** In Progress (No guarantees currently)
-* **Speakersafetyd Port:** In Progress (Just cloned the repo for now)
+* **Speakersafetyd Port:** In Progress
 
 ## Installation & Testing
 *Note: You must explicitly pass `snd-soc-x1e80100.i_accept_the_danger=1` to your kernel parameters for these configurations to fully apply.*
 
 We provide automated deployment scripts in the `/deployers` directory:
-1. **User-space Only (`framework-configuration.sh`):** Safely installs the ALSA UCM and PipeWire topologies. 
+1. **User-space Only (`framework-configuration.sh`):** Safely installs the ALSA UCM and PipeWire topologies and intilializes speakersafetyd.
 2. **Bare-metal Deployer (`kernel_compile-deploy.sh`):** An interactive script that downloads, patches, compiles, and installs a Release Candidate kernel with our custom driver math baked in.
 
 ## Contributing
